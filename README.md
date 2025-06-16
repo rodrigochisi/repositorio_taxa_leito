@@ -32,9 +32,10 @@ Criei uma view nomeada `Taxa_Leitos.sql`, que realiza:
 - Cálculo da porcentagem de ocupação
 - Campo especial para controlar unidades com limitação de leitos:
 
+
 ```sql
 CASE 
   WHEN codigomultiempresa = 9 AND total_leitos <= 87 THEN 1
   WHEN codigomultiempresa <> 9 THEN 1
   ELSE 0
-END AS limitar_leitos
+END AS limitar_leitos 
